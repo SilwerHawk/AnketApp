@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="text-2xl font-bold text-center mb-6">SIGN UP</h2>
+<p class="text-xs text-gray-500 mb-4">Enter your personal details</p>
+
+<form method="POST" class="space-y-4">
+
+  <!-- kişisel bilgiler -->
+  <input name="full_name" placeholder="Full Name" class="w-full rounded-lg border px-3 py-2 bg-slate-50" required>
+  <input name="email" placeholder="Email" type="email" class="w-full rounded-lg border px-3 py-2 bg-slate-50" required>
+
+  <!-- anket soruları -->
+  <p class="text-xs text-gray-500 mt-6">Service satisfaction details</p>
+
+  <label class="block text-sm font-medium">1) Hizmet kalitesinden memnun musunuz?</label>
+  <select name="hizmet_kalite" class="w-full rounded-lg border px-3 py-2 bg-slate-50">
+    <option>Çok memnunum</option>
+    <option>Memnunum</option>
+    <option>Kararsızım</option>
+    <option>Memnun değilim</option>
+  </select>
+
+  <label class="block text-sm font-medium">2) Personelin ilgisini nasıl değerlendirirsiniz?</label>
+  <select name="personel_ilgi" class="w-full rounded-lg border px-3 py-2 bg-slate-50">
+    <option>Harika</option>
+    <option>İyi</option>
+    <option>Orta</option>
+    <option>Zayıf</option>
+  </select>
+
+  <label class="block text-sm font-medium">3) Fiyat/performans açısından memnun musunuz?</label>
+  <select name="fiyat_memnuniyet" class="w-full rounded-lg border px-3 py-2 bg-slate-50">
+    <option>Çok memnunum</option>
+    <option>Memnunum</option>
+    <option>Memnun değilim</option>
+  </select>
+
+  <label class="block text-sm font-medium">4) Hizmetimizi tekrar tercih eder misiniz?</label>
+  <select name="tekrar_tercih" class="w-full rounded-lg border px-3 py-2 bg-slate-50">
+    <option>Evet</option>
+    <option>Belki</option>
+    <option>Hayır</option>
+  </select>
+
+  <textarea name="yorum" placeholder="Eklemek istediğiniz bir yorum var mı?" class="w-full rounded-lg border px-3 py-2 bg-slate-50 h-24"></textarea>
+
+  <div class="flex items-center justify-between pt-2">
+    <a class="px-4 py-2 rounded-lg border bg-white text-gray-700">Back</a>
+    <button type="submit" class="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">SUBMIT</button>
+  </div>
+</form>
+{% endblock %}
